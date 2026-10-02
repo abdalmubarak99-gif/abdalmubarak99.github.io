@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Al Mubarak | Executive Portfolio</title>
+    <!-- Script to dynamically render the QR Code -->
+    <script src="https://cloudflare.com"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #0d9488;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); background-color: #ffffff; line-height: 1.6; }
+        header { background-color: var(--primary); color: white; padding: 5rem 2rem; text-align: center; }
+        header h1 { font-size: 2.5rem; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        header p { color: #94a3b8; font-size: 1.2rem; font-weight: 300; max-width: 800px; margin: 0 auto 1.5rem auto; }
+        .btn-container { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .btn { display: inline-block; background-color: var(--accent); color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background-color: #0f766e; }
+        .btn-secondary { background-color: #475569; }
+        .btn-secondary:hover { background-color: #334155; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        section { margin-bottom: 3.5rem; }
+        h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .card { background: var(--bg-light); padding: 1.5rem; border-left: 4px solid var(--accent); border-radius: 4px; text-align: center; }
+        .card h3 { font-size: 1.8rem; color: var(--primary); }
+        .card p { color: var(--text-light); font-size: 0.9rem; }
+        .exp-item { margin-bottom: 2rem; }
+        .exp-title { font-weight: 700; font-size: 1.1rem; color: var(--primary); display: flex; justify-content: space-between; flex-wrap: wrap; }
+        .exp-company { color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+        ul { margin-left: 1.25rem; color: var(--text-light); }
+        li { margin-bottom: 0.5rem; }
+        
+        /* QR Code Container Styling */
+        .qr-section { background: var(--bg-light); padding: 2rem; border-radius: 8px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border: 1px dashed #cbd5e1; }
+        #qrcode { padding: 10px; background: white; border-radius: 4px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        
+        footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 4px solid var(--accent); }
+        footer a { color: white; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ABDULLAH AL MUBARAK MD JALIL</h1>
+        <p>Technology Commercialization &bull; Strategic Partnerships &bull; Energy Transition</p>
+        <div class="btn-container">
+            <a href="https://linkedin.com" target="_blank" class="btn">Connect on LinkedIn</a>
+            <!-- Links directly to your uploaded PDF document -->
+            <a href="resume.pdf" download class="btn btn-secondary">Download PDF Resume</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>Executive Profile</h2>
+            <p>Strategic and result-driven Senior Executive with over 20 years of leadership experience in technology commercialization, joint venture alliances, and corporate development across the global energy sector. Proven success directing partnership portfolios exceeding USD 200 million and securing USD 100 million in strategic technology collaborations with cross-industry leaders. Deep domain expertise in CCUS, carbon management, advanced gas separation, and energy transition initiatives.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>USD 200M+</h3>
+                    <p>Partnership Portfolio Managed</p>
+                </div>
+                <div class="card">
+                    <h3>USD 100M</h3>
+                    <p>Strategic Alliances Secured</p>
+                </div>
+                <div class="card">
+                    <h3>20+ Years</h3>
+                    <p>Energy Sector Leadership</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="exp-item">
+                <div class="exp-title"><span>PRINCIPAL CONSULTANT</span> <span>2025 – Present</span></div>
+                <div class="exp-company">SAHYIA GLOBAL</div>
+                <ul>
+                    <li>Orchestrated market-entry and commercialization strategies for global energy clients, focusing on scaling CCUS technologies.</li>
+                    <li>Delivered comprehensive techno-commercial evaluations and due diligence frameworks to assess investment opportunities.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title"><span>SENIOR MANAGER, STRATEGIC PARTNERSHIP MANAGEMENT</span> <span>2023 – 2025</span></div>
+                <div class="exp-company">PETRONAS</div>
+                <ul>
+                    <li>Governed a high-value partnership portfolio exceeding USD 200 million, managing 300+ strategic agreements and 190 global partners.</li>
+                    <li>Spearheaded executive-level alliances with tech giants and energy majors including Microsoft, AWS, Shell, and TotalEnergies.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- QR Code Dynamic Section -->
+        <section id="share">
+            <h2>Scan & Share Profile</h2>
+            <div class="qr-section">
+                <p>Scan this QR code to open my live portfolio or download my offline CV on your mobile device:</p>
+                <div id="qrcode"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Abdullah Al Mubarak. Located in Kuala Lumpur, Malaysia.</p>
+        <p>Email: <a href="mailto:abdullahmubarak.jalil@gmail.com">abdullahmubarak.jalil@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Automatically targets your unique live web address URL path
+        new QRCode(document.getElementById("qrcode"), {
+            text: window.location.href,
+            width: 160,
+            height: 160,
+            colorDark : "#0f172a",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Al Mubarak | Executive Portfolio</title>
+    <!-- Script to dynamically render the QR Code -->
+    <script src="https://cloudflare.com"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #0d9488;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); background-color: #ffffff; line-height: 1.6; }
+        header { background-color: var(--primary); color: white; padding: 5rem 2rem; text-align: center; }
+        header h1 { font-size: 2.5rem; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        header p { color: #94a3b8; font-size: 1.2rem; font-weight: 300; max-width: 800px; margin: 0 auto 1.5rem auto; }
+        .btn-container { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .btn { display: inline-block; background-color: var(--accent); color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background-color: #0f766e; }
+        .btn-secondary { background-color: #475569; }
+        .btn-secondary:hover { background-color: #334155; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        section { margin-bottom: 3.5rem; }
+        h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .card { background: var(--bg-light); padding: 1.5rem; border-left: 4px solid var(--accent); border-radius: 4px; text-align: center; }
+        .card h3 { font-size: 1.8rem; color: var(--primary); }
+        .card p { color: var(--text-light); font-size: 0.9rem; }
+        .exp-item { margin-bottom: 2rem; }
+        .exp-title { font-weight: 700; font-size: 1.1rem; color: var(--primary); display: flex; justify-content: space-between; flex-wrap: wrap; }
+        .exp-company { color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+        ul { margin-left: 1.25rem; color: var(--text-light); }
+        li { margin-bottom: 0.5rem; }
+        
+        /* QR Code Container Styling */
+        .qr-section { background: var(--bg-light); padding: 2rem; border-radius: 8px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border: 1px dashed #cbd5e1; }
+        #qrcode { padding: 10px; background: white; border-radius: 4px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        
+        footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 4px solid var(--accent); }
+        footer a { color: white; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ABDULLAH AL MUBARAK MD JALIL</h1>
+        <p>Technology Commercialization &bull; Strategic Partnerships &bull; Energy Transition</p>
+        <div class="btn-container">
+            <a href="https://linkedin.com" target="_blank" class="btn">Connect on LinkedIn</a>
+            <!-- Links directly to your uploaded PDF document -->
+            <a href="resume.pdf" download class="btn btn-secondary">Download PDF Resume</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>Executive Profile</h2>
+            <p>Strategic and result-driven Senior Executive with over 20 years of leadership experience in technology commercialization, joint venture alliances, and corporate development across the global energy sector. Proven success directing partnership portfolios exceeding USD 200 million and securing USD 100 million in strategic technology collaborations with cross-industry leaders. Deep domain expertise in CCUS, carbon management, advanced gas separation, and energy transition initiatives.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>USD 200M+</h3>
+                    <p>Partnership Portfolio Managed</p>
+                </div>
+                <div class="card">
+                    <h3>USD 100M</h3>
+                    <p>Strategic Alliances Secured</p>
+                </div>
+                <div class="card">
+                    <h3>20+ Years</h3>
+                    <p>Energy Sector Leadership</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="exp-item">
+                <div class="exp-title"><span>PRINCIPAL CONSULTANT</span> <span>2025 – Present</span></div>
+                <div class="exp-company">SAHYIA GLOBAL</div>
+                <ul>
+                    <li>Orchestrated market-entry and commercialization strategies for global energy clients, focusing on scaling CCUS technologies.</li>
+                    <li>Delivered comprehensive techno-commercial evaluations and due diligence frameworks to assess investment opportunities.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title"><span>SENIOR MANAGER, STRATEGIC PARTNERSHIP MANAGEMENT</span> <span>2023 – 2025</span></div>
+                <div class="exp-company">PETRONAS</div>
+                <ul>
+                    <li>Governed a high-value partnership portfolio exceeding USD 200 million, managing 300+ strategic agreements and 190 global partners.</li>
+                    <li>Spearheaded executive-level alliances with tech giants and energy majors including Microsoft, AWS, Shell, and TotalEnergies.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- QR Code Dynamic Section -->
+        <section id="share">
+            <h2>Scan & Share Profile</h2>
+            <div class="qr-section">
+                <p>Scan this QR code to open my live portfolio or download my offline CV on your mobile device:</p>
+                <div id="qrcode"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Abdullah Al Mubarak. Located in Kuala Lumpur, Malaysia.</p>
+        <p>Email: <a href="mailto:abdullahmubarak.jalil@gmail.com">abdullahmubarak.jalil@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Automatically targets your unique live web address URL path
+        new QRCode(document.getElementById("qrcode"), {
+            text: window.location.href,
+            width: 160,
+            height: 160,
+            colorDark : "#0f172a",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
