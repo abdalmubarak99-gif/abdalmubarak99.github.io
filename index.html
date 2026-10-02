@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Al Mubarak | Executive Portfolio</title>
-    <!-- Script to dynamically render the QR Code -->
-    <script src="https://cloudflare.com"></script>
+    <!-- SECURE HTTPS SCRIPT IMPORT -->
+    <script src="https://cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         :root {
             --primary: #0f172a;
@@ -39,7 +39,7 @@
         
         /* QR Code Container Styling */
         .qr-section { background: var(--bg-light); padding: 2rem; border-radius: 8px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border: 1px dashed #cbd5e1; }
-        #qrcode { padding: 10px; background: white; border-radius: 4px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        #qrcode { padding: 10px; background: white; border-radius: 4px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); min-height: 160px; min-width: 160px; display: flex; align-items: center; justify-content: center; }
         
         footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 4px solid var(--accent); }
         footer a { color: white; text-decoration: none; font-weight: 600; }
@@ -51,9 +51,7 @@
         <h1>ABDULLAH AL MUBARAK MD JALIL</h1>
         <p>Technology Commercialization &bull; Strategic Partnerships &bull; Energy Transition</p>
         <div class="btn-container">
-            <!-- FIXED LINKEDIN URL -->
             <a href="https://linkedin.com" target="_blank" class="btn">Connect on LinkedIn</a>
-            <!-- FIXED SPACE ENCODING FOR FILE NAME -->
             <a href="AMJ%20Resume%20ATS%20Oct%202026.pdf" download class="btn btn-secondary">Download PDF Resume</a>
         </div>
     </header>
@@ -100,7 +98,7 @@
             </div>
         </section>
 
-        <!-- QR Code Dynamic Section -->
+        <!-- QR Code Display Area -->
         <section id="share">
             <h2>Scan & Share Profile</h2>
             <div class="qr-section">
@@ -115,14 +113,18 @@
         <p>Email: <a href="mailto:abdullahmubarak.jalil@gmail.com">abdullahmubarak.jalil@gmail.com</a></p>
     </footer>
 
+    <!-- STABLE DYNAMIC RENDER LOGIC WITH EXPLICIT FALLBACK -->
     <script>
-        new QRCode(document.getElementById("qrcode"), {
-            text: window.location.href,
-            width: 160,
-            height: 160,
-            colorDark : "#0f172a",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
+        window.addEventListener('load', function() {
+            var currentUrl = window.location.href || 'https://github.io';
+            new QRCode(document.getElementById("qrcode"), {
+                text: currentUrl,
+                width: 160,
+                height: 160,
+                colorDark : "#0f172a",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
         });
     </script>
 </body>
