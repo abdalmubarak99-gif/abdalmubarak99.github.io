@@ -34,11 +34,8 @@
         .exp-company { color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
         ul { margin-left: 1.25rem; color: var(--text-light); }
         li { margin-bottom: 0.5rem; }
-        
-        /* Fully Bulletproof Canvas Box Engine Container */
-        .qr-section { background: var(--bg-light); padding: 2rem; border-radius: 8px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border: 1px dashed #cbd5e1; }
-        .qr-wrapper { padding: 15px; background: white; border-radius: 6px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: inline-block; }
-        canvas { display: block; background: white; }
+        footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 4px solid var(--accent); }
+        footer a { color: white; text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -47,7 +44,9 @@
         <h1>ABDULLAH AL MUBARAK MD JALIL</h1>
         <p>Technology Commercialization &bull; Strategic Partnerships &bull; Energy Transition</p>
         <div class="btn-container">
-            <a href="https://linkedin.com" target="_blank" class="btn">Connect on LinkedIn</a>
+            <!-- FIXED EXPLICIT LINKEDIN PATHWAY -->
+            <a href="
+www.linkedin.com/in/abdullah-al-mubarak-md-jalil-9264ab56" target="_blank" class="btn">Connect on LinkedIn</a>
             <a href="AMJ%20Resume%20ATS%20Oct%202026.pdf" download class="btn btn-secondary">Download PDF Resume</a>
         </div>
     </header>
@@ -75,6 +74,7 @@
 
         <section id="experience">
             <h2>Professional Experience</h2>
+            
             <div class="exp-item">
                 <div class="exp-title"><span>PRINCIPAL CONSULTANT</span> <span>2025 – Present</span></div>
                 <div class="exp-company">SAHYIA GLOBAL</div>
@@ -93,17 +93,6 @@
                 </ul>
             </div>
         </section>
-
-        <!-- HIGH-CONFIDENCE ZERO DEPENDENCY ENCODER MATRIX DISPLAY PANEL -->
-        <section id="share">
-            <h2>Scan & Share Profile</h2>
-            <div class="qr-section">
-                <p>Scan this QR code to open my live portfolio or download my offline CV on your mobile device:</p>
-                <div class="qr-wrapper">
-                    <canvas id="qrCanvas" width="174" height="174"></canvas>
-                </div>
-            </div>
-        </section>
     </div>
 
     <footer>
@@ -111,35 +100,9 @@
         <p>Email: <a href="mailto:abdullahmubarak.jalil@gmail.com">abdullahmubarak.jalil@gmail.com</a></p>
     </footer>
 
-    <!-- BITMAP STRING DRAW ENGINE - RUNS ENTIRELY LOCAL WITH NO REMOTE CONNECTIONS -->
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const canvas = document.getElementById('qrCanvas');
-            const ctx = canvas.getContext('2d');
-            const mSize = 6; 
-            
-            // Native bitonal compression array map for https://abdalmubarak99.github.io/
-            const hexArr = [
-                "FE38E07F","80282040","BA282E40","BA282E40","BA282E40","80282040","FE38E07f","00000000",
-                "C787E040","66C1E000","5ACEE040","D983E07F","66CD2040","B6DCE07F","46C8E040","56C12040",
-                "DA28E07F","46CDA040","56C62040","D6C3E07F","00000000","FE2AE05F","822AE01F","BA22A01F",
-                "BA2AE01F","BA2AE01F","822AE01F","FE2AE05F","00000000"
-            ];
+</body>
+</html>
 
-            hexArr.forEach((hStr, rowIdx) => {
-                const decVal = parseInt(hStr, 16);
-                for (let colIdx = 0; colIdx < 29; colIdx++) {
-                    const shiftBit = 31 - colIdx;
-                    if ((decVal >> shiftBit) & 1) {
-                        ctx.fillStyle = '#0f172a';
-                        ctx.fillRect(colIdx * mSize, rowIdx * mSize, mSize, mSize);
-                    } else {
-                        ctx.fillStyle = '#ffffff';
-                        ctx.fillRect(colIdx * mSize, rowIdx * mSize, mSize, mSize);
-                    }
-                }
-            });
-        });
     </script>
 </body>
 </html>
